@@ -3,6 +3,16 @@
  * @return {number}
  */
 var climbStairs = function(n) {
+    /**
+     * When we climb stairs, we can either take 1 step or 2 steps.
+     * So, if we want to climb to nth step, we can:
+     * 1. climb 1 step from (n - 1)th step
+     * 2. climb 2 steps from (n - 2)th step
+     * 
+     * Therefore, climb to the nth step = climb to the (n - 1)th step + climb to the (n - 2)th step.
+     * f(n) = f(n-1) + f(n-2)
+     */
+    
     if (n <= 3) return n;
 
     let pre1 = 2;
